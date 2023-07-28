@@ -7,7 +7,7 @@ start = datetime.datetime.now()
 # words = '0123456789qwertyuiopasdfghjklzxcvbnm'
 words = '0123456789' # 纯数字
 # 生成密码的位数
-r = its.product(words, repeat=11)  # 即生成8位密码，正常情况下热点密码位数为8
+r = its.product(words, repeat=8)  # 即生成8位密码，正常情况下热点密码位数为8
 dic = open(r"E:\alphabetPass.txt", 'a')  # alphabetPass.txt 是密码本名称
 for i in r:
     dic.write(''.join(i))
@@ -18,3 +18,4 @@ dic.close()
 print('密码本生成好了')
 end = datetime.datetime.now()
 print("生成密码本一共用了多长时间：{}".format(end - start))
+
